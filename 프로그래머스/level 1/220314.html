@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>완주하지 못한 선수</title>
 </head>
 <body>
+    <script>
+        // 완주하지 못한 선수
+
+        function solution(participant, completion) {
+            var answer = '';
+            
+            participant.sort();
+            completion.sort();
+            
+            for(let i = 0; i < participant.length; i++ ) {
+                if (participant[i] !== completion[i]) 
+                    return participant[i]
+            }
     
+            return answer;
+        }
+    </script>
 </body>
 </html>
