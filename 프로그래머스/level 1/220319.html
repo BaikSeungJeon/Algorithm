@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모의고사</title>
+</head>
+<body>
+    <script>
+        // 모의고사
+        
+        function solution(answers) {
+            var result = [];
+            
+            let number1 = [1, 2, 3, 4, 5];                  // 1번 수포자 배열
+            let number2 = [2, 1, 2, 3, 2, 4, 2, 5];         // 2번 수포자 배열
+            let number3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5];   // 3번 수포자 배열
+            let count = [0, 0, 0]                           // [1번, 2번, 3번]
+            
+            for (let i = 0; i <= answers.length; i++) {
+                if (number1[i % number1.length] === answers[i]) count[0]++;
+                if (number2[i % number2.length] === answers[i]) count[1]++;
+                if (number3[i % number3.length] === answers[i]) count[2]++;
+            };
+            
+            // 제일 많이 맞힌 사람 
+            let top = Math.max(...count);
+            
+            // 
+            for (let j = 0; j <= count.length; j++) {
+                if (top === count[j]) {
+                    result.push(j+1);
+                };
+            };
+            
+            return result;
+        }
+    </script>
+</body>
+</html>
