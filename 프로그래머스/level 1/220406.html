@@ -12,10 +12,10 @@
 
         function solution(n) {
             let answer = '';
-            let num124 = [4, 1, 2];
+            let number = [4, 1, 2];
             
             while(n) {
-                answer = num124[n%3] + answer;
+                answer = number[n%3] + answer;
                 n = n%3 === 0 ? n/3 -1 : Math.floor(n/3); 
             }
             
