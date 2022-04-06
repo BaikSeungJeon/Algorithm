@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>124 나라의 숫자</title>
 </head>
 <body>
-    
+    <script>
+        // 124 나라의 숫자
+
+        function solution(n) {
+            let answer = '';
+            let num124 = [4, 1, 2];
+            
+            while(n) {
+                answer = num124[n%3] + answer;
+                n = n%3 === 0 ? n/3 -1 : Math.floor(n/3); 
+            }
+            
+            return answer;
+        }
+    </script>
 </body>
 </html>
