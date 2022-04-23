@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핸드폰 번호 가리기</title>
+</head>
+<body>
+    <script>
+        // 핸드폰 번호 가리기
+
+        function solution(phone_number) {
+            let answer = '';
+            
+            answer = '*'.repeat(phone_number.length - 4) + phone_number.slice(-4);
+            
+            return answer;
+        }
+    </script>
+</body>
+</html>
