@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최대공약수와 최소공배수</title>
+</head>
+<body>
+    <script>
+        // 최대공약수와 최소공배수
+        function solution(n, m) {
+            let G = (a, b) => b === 0 ? a : G(b, a%b)
+            let L = (a, b) => a * b / G(a, b)
+            return [G(n, m), L(n, m)];
+        }
+    </script>
+</body>
+</html>
