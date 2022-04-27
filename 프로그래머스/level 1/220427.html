@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>하샤드 수</title>
 </head>
 <body>
-    
+    <script>
+        // 하샤드 수
+        function solution(x) {
+            
+            let sum = 0;
+            let arr = String(x).split("");
+            
+            for(let i = 0; i < arr.length; i++) {
+                sum += Number(arr[i])
+            }
+
+            return x % sum === 0 ? true : false
+        }
+    </script>
 </body>
 </html>
