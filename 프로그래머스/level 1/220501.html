@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>가장 큰 수</title>
 </head>
 <body>
     <script>
-        
+        // 가장 큰 수
+        function solution(numbers) {
+
+            let string = numbers.map(a => a + ""); // 문자열로 변경
+            let answer = string.sort((a, b) => (b + a) - (a + b)).join('');
+            
+            return answer[0] === '0' ? '0' : answer;
+        }
     </script>
 </body>
 </html>
