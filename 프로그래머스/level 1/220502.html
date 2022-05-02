@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>같은 숫자는 싫어</title>
+</head>
+<body>
+    <script>
+        function solution(arr){
+            let answer = []; // 담아서 리턴할 빈 배열
+            
+            for(let i = 0; i < arr.length; i++) {
+                if(arr[i] !== arr[i+1]) answer.push(arr[i]);
+            }
+            return answer;
+        }
+    </script>
+</body>
+</html>
