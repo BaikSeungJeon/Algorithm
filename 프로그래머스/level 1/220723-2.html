@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나누어 떨어지는 숫자 배열</title>
+</head>
+<body>
+    <script>
+        function solution(arr, divisor) {
+            const answer = arr.filter(element => element % divisor == 0)
+            return answer.length == 0 ? [-1] : answer.sort((a, b) => a - b)
+        }
+    </script>
+</body>
+</html>
